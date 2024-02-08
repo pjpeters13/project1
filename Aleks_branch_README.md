@@ -1,4 +1,4 @@
-# Branc Usage Guide
+# Branch Usage Guide
 
 Before diving into the specific files, please note that it's crucial to start the files in the order outlined below. The scripts sequentially gather data through API calls, and some processes may take longer to complete due to the volume of data being processed. Following the specified order ensures that the data flows correctly through each preparation and analysis stage.
 
