@@ -4,7 +4,7 @@ Before diving into the specific files, please note that it's crucial to start th
 
 ## Getting Started
 
-To use these files effectively, start with `data_prep.ipynb` to pull and initially prepare your dataset. Make sure you have created a `Resources` folder in your project directory before running the notebook. This folder will be used to store intermediate and final data files.
+To use these files effectively, start with `geting_data.ipynb` to pull and initially prepare your dataset. Make sure you have created a `Resources` folder in your project directory before running the notebook. This folder will be used to store intermediate and final data files.
 
 After preparing your initial dataset, proceed with `prepdata_ofns_desc.ipynb` to clean your data with a specific focus on offense types and reporting times. The cleaned data will be crucial for the analysis phase.
 
@@ -14,7 +14,7 @@ By following these steps, you'll be well on your way to uncovering insights from
 
 ## Overview of Files
 
-### 1. `data_prep.ipynb`
+### 1. `geting_data.ipynb`
 
 **Purpose:** Initial data preparation and understanding.
 
