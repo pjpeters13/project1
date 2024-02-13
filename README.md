@@ -48,5 +48,24 @@ This file serves as the cleaned dataset, ready for in-depth analysis.
 - Identifies the top 10 most common criminal offenses within the dataset.
 - Prepares the identified data for predictive modeling using the Prophet model.
 
-**Output:** This file readies the top 10 offenses for future modeling, aiding in understanding trends and potentially forecasting crime rates.
+**Output:** This file readies the top 10 offenses for future modeling, aiding in understanding trends and potentially forecasting crime rates.  
+
+
+### 4. `jake-prophet.ipynb`  
+
+**Purpose:** Deep analysis of time-based crime data  
+
+**Analysis:**  
+- Loads the `extended_nypd_crime_data` file into a dataframe
+- Average Number of Crimes Per Month: Visualizes the monthly crime trends to identify any seasonal patterns.
+- Average Number of Crimes Per Day of the Month: Helps in understanding if crimes are more frequent on specific days of the month.
+- Average Number of Crimes Per Day of the Week: Analyzes weekly patterns to find out on which days crimes are more commonly reported.
+- The Most Common Crime on Each Day of the Week: Identifies which types of crimes are most frequent on specific days.
+- Crime Rates Based on Time of Day: Examines how crime rates vary throughout the day.
+- Forecasting with Prophet: Utilizes the Prophet library to project crime rates for 2023 and analyze seasonality effects.
+
+**Output:** Multiple graphs, dataframes, and other visualizations of the data as outlined in the Analysis.  
+
+
+
 
