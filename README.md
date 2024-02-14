@@ -1,4 +1,4 @@
-# project1# Branch Usage Guide
+# project1 Usage Guide
 
 Before diving into the specific files, please note that it's crucial to start the files in the order outlined below. The scripts sequentially gather data through API calls, and some processes may take longer to complete due to the volume of data being processed. Following the specified order ensures that the data flows correctly through each preparation and analysis stage.
 
@@ -8,13 +8,14 @@ To use these files effectively, start with `geting_data.ipynb` to pull and initi
 
 After preparing your initial dataset, proceed with `prepdata_ofns_desc.ipynb` to clean your data with a specific focus on offense types and reporting times. The cleaned data will be crucial for the analysis phase.
 
-Finally, use `ofns_data_analysis.ipynb` to analyze the cleaned data, focusing on identifying the most common offenses and preparing them for further predictive modeling.
+
+Finally, use any of files from Data_Analysis folder to analyze the cleaned data, focusing on identifying the most common offenses and preparing them for further predictive modeling.
 
 By following these steps, you'll be well on your way to uncovering insights from the crime data and preparing it for comprehensive analysis and modeling.
 
 ## Overview of Files
 
-### 1. `geting_data.ipynb`
+### 1. `Data_Prep/geting_data.ipynb`
 
 **Purpose:** Initial data preparation and understanding.
 
@@ -28,7 +29,7 @@ By following these steps, you'll be well on your way to uncovering insights from
 **Output:** `Resources/final_df.csv`  
 **Note:** Ensure you have a `Resources` folder in your project directory to store the output file.
 
-### 2. `prepdata_ofns_desc.ipynb`
+### 2. `Data_Prep/prepdata_ofns_desc.ipynb`
 
 **Purpose:** Further cleaning of the initially prepared data with a focus on offense types and reported times.
 
@@ -36,27 +37,30 @@ By following these steps, you'll be well on your way to uncovering insights from
 - Cleans the previously created `final_df.csv`, focusing on the `ofns_desc` column (offense descriptions) and the time each crime was reported.
 - The cleaned data is then saved for further analysis.
 
-**Output:** `Resources/cleaned_crime_data.csv`  
-This file serves as the cleaned dataset, ready for in-depth analysis.
+**Output:** `Resources/cleaned_crime_data.csv` and  `Resources/extended_nypd_crime_data.csv` 
+This file serves as the cleaned datasets, ready for in-depth analysis.
 
-### 3. `ofns_data_analysis.ipynb`
+**Important Note!!!**
+- Due to the fact that some research was done on similarly organized datasets and to avoid errors occurring during code execution, we will create two files in the Resource folder. 
+
+### 3. `Data_Analysis/ofns_data_analysis.ipynb`
 
 **Purpose:** Analysis of the most common offenses and preparation for modeling.
 
 **Analysis:**
 - Loads the `cleaned_crime_data.csv` file for analysis.
 - Identifies the top 10 most common criminal offenses within the dataset.
-- Prepares the identified data for predictive modeling using the Prophet model.
+- Prepares the identified data for next researches.
 
 **Output:** This file readies the top 10 offenses for future modeling, aiding in understanding trends and potentially forecasting crime rates.  
 
 
-### 4. `jake-prophet.ipynb`  
+### 4. `Data_Analysis/jake-prophet.ipynb`  
 
 **Purpose:** Deep analysis of time-based crime data  
 
 **Analysis:**  
-- Loads the `extended_nypd_crime_data` file into a dataframe
+- Loads the `extended_nypd_crime_data.csv` file into a dataframe
 - Average Number of Crimes Per Month: Visualizes the monthly crime trends to identify any seasonal patterns.
 - Average Number of Crimes Per Day of the Month: Helps in understanding if crimes are more frequent on specific days of the month.
 - Average Number of Crimes Per Day of the Week: Analyzes weekly patterns to find out on which days crimes are more commonly reported.
@@ -66,6 +70,44 @@ This file serves as the cleaned dataset, ready for in-depth analysis.
 
 **Output:** Multiple graphs, dataframes, and other visualizations of the data as outlined in the Analysis.  
 
+### 5. `Data_Analysis/10_most_common_criminal_offenses.ipynb`  
+
+**Purpose:** Display top 10 Crime and analysis of picks  
+
+**Analysis:**  
+- Loads the `cleaned_crime_data.csv` file into a dataframe
+- During the investigation of the 10 most frequent criminal cases, we noticed that CRIMINAL MISCHIEF & RELATED OF is in fourth place in terms of the number of reported cases, dominating the chart due to the pronounced peaks. Further analysis showed that there is a correlation with holidays for the highest peaks.
+
+**Output:** Multiple graphs, dataframes, and other visualizations of the data as outlined in the Analysis.  
+
+### 6. `Data_Analysis/crime_per_yeares.ipynb`  
+
+**Purpose:** Display number of cases by year and trend  
+
+**Analysis:**  
+- Loads the `extended_nypd_crime_data` file into a dataframe
+- A linear regression analysis on a dataset of yearly cases, converting years to numeric format, calculating regression parameters, and visualizing the trend line alongside actual case counts. 
+
+**Output:** `Output/annual_number_of_cases_and_trend_line.png`
+
+### 7. `Data_Analysis/trendiness.ipynb`  
+
+**Purpose:** The trendiness of changes in criminal activities varies between different types of crime.  
+
+**Analysis:**  
+- Loads the `cleaned_crime_data.csv` file into a dataframe
+- From this dataset, we can conclude that the trendiness of crime change varies across different types of crime. Positive trendiness values indicate an increase in criminal activities over time for certain crime types, while negative trendiness values suggest a decrease. These insights are crucial for policymaking and law enforcement strategies to prioritize resources effectively. 
+
+**Output:** `Output/trendiness_of_crime_change_over_time_for_each_type_of_crime.png`
+            `Output/the_overall_trendiness_of_crime_cases_over_the_years.png`
+
+### 8. `burrough_data.ipynbb`  
+
+**Purpose:** The trendiness of changes in criminal activities varies between different types of crime.  
+
+**Analysis:**  
+- Loads the `extended_nypd_crime_data.csv` file into a dataframe
+- By analyzing this data set, we tried to track criminal activities by Boroughs over time. This script groups the data by borough and calculates the average number of crimes reported per year for each borough.
 
 
 
