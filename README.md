@@ -103,11 +103,15 @@ This file serves as the cleaned datasets, ready for in-depth analysis.
 
 ### 8. `burrough_data.ipynbb`  
 
-**Purpose:** The trendiness of changes in criminal activities varies between different types of crime.  
+**Purpose:** Analysis of criminal activities by district.  
 
 **Analysis:**  
 - Loads the `extended_nypd_crime_data.csv` file into a dataframe
 - By analyzing this data set, we tried to track criminal activities by Boroughs over time. This script groups the data by borough and calculates the average number of crimes reported per year for each borough.
 
+### 9. `selektor.ipynbb`  
+
+**Purpose:** This Python code creates a user interface in Jupyter Notebook using ipywidgets to select from a list of available notebooks and then execute the chosen notebook when a button is clicked. The `run_notebook()` function defines a custom line magic command to run Jupyter notebooks using `%run`, allowing seamless integration and execution of notebooks within the Jupyter environment.
+.  
 
 
