@@ -101,7 +101,7 @@ This file serves as the cleaned datasets, ready for in-depth analysis.
 **Output:** `Output/trendiness_of_crime_change_over_time_for_each_type_of_crime.png`
             `Output/the_overall_trendiness_of_crime_cases_over_the_years.png`
 
-### 8. `burrough_data.ipynbb`  
+### 8. `burrough_data.ipynb`  
 
 **Purpose:** Analysis of criminal activities by district.  
 
@@ -109,11 +109,19 @@ This file serves as the cleaned datasets, ready for in-depth analysis.
 - Loads the `extended_nypd_crime_data.csv` file into a dataframe
 - By analyzing this data set, we tried to track criminal activities by Boroughs over time. This script groups the data by borough and calculates the average number of crimes reported per year for each borough.
 
-### 9. `selektor.ipynb`  
+### 9. `YearlyStats.ipynb`  
+
+**Purpose:** Review how crime rates correlate with the time of year.  
+
+**Analysis:**  
+- Loads the `extended_nypd_crime_data.csv` file into a dataframe
+- By analyzing this data set, we tried to review how crime rates correlate with the time of year..
+
+### 10. `selektor.ipynb`  
 
 **Purpose:** This Python code creates a user interface in Jupyter Notebook using ipywidgets to select from a list of available notebooks and then execute the chosen notebook when a button is clicked. The `run_notebook()` function defines a custom line magic command to run Jupyter notebooks using `%run`, allowing seamless integration and execution of notebooks within the Jupyter environment.
 
-### 10. `main.py`  
+### 11. `main.py`  
 
 **Purpose:** This Python file should be a dashboard for viewing the results that we have reached through previous analyses, but at the moment it leads the user to the powerpoint presentation of this project.
 
